@@ -1,0 +1,16 @@
+Lab 8 
+Gabriela Matuszewska wt 11:00
+
+
+1. Co zrobi następująca instrukcja msgctl(2, IPC_RMID, 0)?
+
+msgctl() - służy do sterowania kolejkami message Systemu V
+
+składnia: 
+int msgctl(int msqid, int cmd, struct msqid_ds *buf);
+
+więc polecenie usunie kolejkę( IPC_RMID usuwa natychmiast kolejkę komunikatów) o id=2, 3 argument to struktura do której zapisujemy informacje zwracana przez funkcje, a ze tylko usuwamy i nic nie zapisujemy do żadnej struktury to argumentem tym jest 0. 
+
+2. Jaki jest warunek gwarancji, że funkcja ftok wygeneruje dwa różne klucze dla dwóch różnych plików?
+
+Dwie różne ścieżki mają zagwarantowane wygenerowanie dwóch różnych kluczy tylko wtedy kiedy te ścieżki są w tym samym systemie plików. 
